@@ -2,6 +2,14 @@
 
 A working MVP for the **“Build an AI Workforce for Businesses”** challenge. Northstar accepts a natural-language lead-operations request, orchestrates five specialist agents, persists CRM updates and execution history to PostgreSQL, drafts customer follow-ups, places outbound communication behind a human-approval gate, and presents the work in a dashboard.
 
+## Demo Video
+
+**Watch the project walkthrough:** [Open the Northstar demo on YouTube](https://youtu.be/13z7OgtBnB8)
+
+[![Watch the Northstar AI Workforce demo on YouTube](https://img.youtube.com/vi/13z7OgtBnB8/hqdefault.jpg)](https://youtu.be/13z7OgtBnB8)
+
+*Click the thumbnail above to watch the demo video.*
+
 ## Live Demo & Admin Login
 
 **Hosted website:** [http://code-e-fiesta1234.vercel.app/](http://code-e-fiesta1234.vercel.app/)
