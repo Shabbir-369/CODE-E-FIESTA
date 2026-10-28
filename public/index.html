@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1220" />
+  <meta name="description" content="Secure AI workforce for lead management, CRM workflow automation, human approvals, and business insights." />
+  <title>Northstar · AI Workforce</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div id="app" class="app-shell hidden">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-row">
+        <div class="brand-mark"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3.5 24.3 15.7 36.5 20 24.3 24.3 20 36.5 15.7 24.3 3.5 20 15.7 15.7Z" fill="currentColor"/><circle cx="20" cy="20" r="4" fill="#0b1220"/></svg></div>
+        <div><div class="brand-title">northstar<span>•</span></div><div class="brand-subtitle">AI workforce</div></div>
+        <button id="close-mobile-nav" class="icon-button close-mobile" aria-label="Close menu">×</button>
+      </div>
+      <div class="workspace-picker"><div class="workspace-avatar">N</div><div class="workspace-copy"><strong id="workspace-name">Northstar Growth Studio</strong><span>Workspace</span></div><span class="chevron">⌄</span></div>
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <button class="nav-item active" data-view="overview"><span class="nav-icon" data-icon="grid"></span><span>Overview</span></button>
+        <button class="nav-item" data-view="leads"><span class="nav-icon" data-icon="users"></span><span>Lead pipeline</span><span id="nav-lead-count" class="nav-count">—</span></button>
+        <button class="nav-item" data-view="whatsapp"><span class="nav-icon" data-icon="message-circle"></span><span>WhatsApp inbox</span><span id="nav-whatsapp-count" class="nav-count pending-count">0</span></button>
+        <button class="nav-item" data-view="workflows"><span class="nav-icon" data-icon="workflow"></span><span>Workflows</span></button>
+        <button class="nav-item" data-view="approvals"><span class="nav-icon" data-icon="shield"></span><span>Approvals</span><span id="nav-approval-count" class="nav-count pending-count">0</span></button>
+        <button class="nav-item" data-view="activity"><span class="nav-icon" data-icon="activity"></span><span>Agent activity</span></button>
+        <button class="nav-item" data-view="insights"><span class="nav-icon" data-icon="chart"></span><span>Insights</span></button>
+      </nav>
+      <div class="nav-label nav-label-bottom">GOVERNANCE</div>
+      <nav class="nav-list" aria-label="Governance navigation">
+        <button class="nav-item" data-view="audit" id="audit-nav"><span class="nav-icon" data-icon="file-check"></span><span>Audit log</span></button>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="secure-card"><div class="secure-top"><span class="secure-dot"></span><span>SECURITY GATEWAY</span><span class="secure-lock" data-icon="shield-check"></span></div><strong>Every action checked</strong><p>Role permissions · Approval policies · Audit trail</p><div class="secure-tag"><span></span> Zero-trust enabled</div></div>
+      <div class="sidebar-profile"><div class="avatar" id="profile-avatar">BO</div><div class="profile-copy"><strong id="profile-name">Business Owner</strong><span id="profile-role">Administrator</span></div><button id="logout-btn" class="logout-button" aria-label="Sign out" title="Sign out" data-icon="logout"></button></div>
+    </aside>
+    <div id="sidebar-scrim" class="sidebar-scrim"></div>
+    <main class="main-panel">
+      <header class="topbar">
+        <button id="open-mobile-nav" class="icon-button open-mobile" aria-label="Open menu">☰</button>
+        <div class="breadcrumbs"><span>Workspace</span><span class="crumb-divider">/</span><strong id="page-crumb">Overview</strong></div>
+        <div class="topbar-right">
+          <div class="live-status"><span class="live-pulse"></span><span>WORKFORCE LIVE</span></div>
+          <button class="topbar-icon" id="top-approvals" title="Open approvals"><span data-icon="bell"></span><i id="top-approval-dot"></i></button>
+          <div class="topbar-divider"></div>
+          <div class="top-user"><div class="avatar avatar-small" id="top-avatar">BO</div><div class="top-user-copy"><strong id="top-user-name">Business Owner</strong><span id="top-user-role">Admin</span></div><span class="chevron">⌄</span></div>
+        </div>
+      </header>
+      <div id="system-banner" class="system-banner hidden"></div>
+      <div id="page-content" class="page-content" aria-live="polite"></div>
+      <footer class="footer"><span>Northstar AI Workforce <span class="footer-dot">•</span> Secure operations preview</span><span><span class="footer-led"></span> Policy gateway active</span></footer>
+    </main>
+  </div>
+
+  <section id="auth-screen" class="auth-screen">
+    <div class="auth-left">
+      <div class="auth-brand"><div class="brand-mark"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3.5 24.3 15.7 36.5 20 24.3 24.3 20 36.5 15.7 24.3 3.5 20 15.7 15.7Z" fill="currentColor"/><circle cx="20" cy="20" r="4" fill="#0b1220"/></svg></div><div><div class="brand-title">northstar<span>•</span></div><div class="brand-subtitle">AI workforce</div></div></div>
+      <div class="auth-art">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-orbit orbit-three"></div>
+        <div class="art-center"><span data-icon="sparkles"></span></div>
+        <div class="art-node node-a"><span data-icon="users"></span></div><div class="art-node node-b"><span data-icon="database"></span></div><div class="art-node node-c"><span data-icon="mail"></span></div><div class="art-node node-d"><span data-icon="chart"></span></div>
+        <div class="art-line art-line-a"></div><div class="art-line art-line-b"></div>
+      </div>
+      <div class="auth-left-copy"><div class="eyebrow"><span class="eyebrow-dot"></span> INTELLIGENCE, WITH GUARDRAILS</div><h1>Your next best<br /><em>move is already</em><br />in motion.</h1><p>Let your AI workforce handle the busywork. Keep humans in control of every important decision.</p><div class="auth-proof"><div class="proof-avatars"><span>A</span><span>CRM</span><span>AI</span></div><div><strong>One coordinated team</strong><small>Plan · Execute · Verify</small></div></div></div>
+      <div class="auth-legal">BUILT FOR BUSINESSES THAT MOVE WITH INTENT <span>© 2026 NORTHSTAR</span></div>
+    </div>
+    <div class="auth-right">
+      <div class="auth-top-note"><span>Already in your workspace?</span><span class="auth-top-dot"></span></div>
+      <div class="login-panel">
+        <div class="login-icon" data-icon="lock-keyhole"></div>
+        <div class="eyebrow dark-eyebrow">SECURE WORKSPACE ACCESS</div>
+        <h2>Welcome back.</h2><p class="login-subtitle">Sign in to see what your workforce has been working on.</p>
+        <form id="login-form" autocomplete="on">
+          <label for="login-email">Work email</label><div class="input-wrap"><span data-icon="mail"></span><input id="login-email" name="email" type="email" autocomplete="username" placeholder="you@company.com" required /></div>
+          <label for="login-password">Password</label><div class="input-wrap"><span data-icon="key-round"></span><input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required minlength="12" /><button type="button" id="toggle-password" class="password-toggle">Show</button></div>
+          <div id="login-error" class="form-error hidden"></div>
+          <button id="login-submit" type="submit" class="primary-button login-submit">Enter workspace <span data-icon="arrow-up-right"></span></button>
+        </form>
+        <div class="login-security"><span data-icon="shield-check"></span><span>Protected by an HttpOnly session and role-based access.</span></div>
+        <div id="login-db-note" class="login-db-note hidden"></div>
+      </div>
+      <div class="auth-right-footer"><span>NEED ACCESS? CONTACT YOUR WORKSPACE ADMIN</span><span>PRIVACY-FIRST BY DESIGN</span></div>
+    </div>
+  </section>
+  <div id="modal-root"></div>
+  <div id="toast-root" class="toast-root" aria-live="polite"></div>
+</body>
+</html>
